@@ -112,7 +112,7 @@ int main(void)
 	
 	HAL_DMA_Start_IT (&hdma_adc1, (uint32_t)&hadc1.Instance->DR, (uint32_t)&Buffer, 100);
 	
-  HAL_TIM_Base_Start_IT(&htim2);
+	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_TIM_Base_Start_IT(&htim3);
 
   /* USER CODE END 2 */
@@ -124,15 +124,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-		// Timer interrupt starts ADC conversion every 100 us (10 kHZ)
+	
+		// Timer2 interrupt starts ADC conversion every 100 us (10 kHZ)
 		// Every 100 conversions DMA interrupt appears  (100 Hz)
 		
-		// Every 
+		// Every 100 iterations message to VCP forms
 		
-		
-		
-		
+		// All actions are processed in interrupt handlers
 	}
   /* USER CODE END 3 */
 }
